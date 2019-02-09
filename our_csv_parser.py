@@ -37,6 +37,8 @@ with open(myfilename, 'r') as file_handle:
         # homework 1
         values = [float(value) for value in values]
 
+        # float() or int() can take in string directly and convert to the specified number type; it will throw error when conditions arent met
+        
         print(values)
 
     # reach homework
