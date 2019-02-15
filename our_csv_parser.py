@@ -11,6 +11,9 @@ myfilename = "housing.data.txt"
 # else:
 #   print ('boo, no files for me')
 
+# homework 1 blank list
+list1 = []
+
 # reach homework
 # start with blank lists for each to append to
 col1 = []
@@ -35,28 +38,32 @@ with open(myfilename, 'r') as file_handle:
         values = line_clean.split(' ')
 
         # homework 1
-        values = [float(value) for value in values]
+        for value in values:
+            try:
+                list1+=[int(value)]
+            except:
+                list1+=[float(value)]
 
         # float() or int() can take in string directly and convert to the specified number type; it will throw error when conditions arent met
         
-        print(values)
+        print(list1)
 
     # reach homework
         # append elements to list of specified column
-        col1.append(values[0])
-        col2.append(values[1])
-        col3.append(values[2])
-        col4.append(values[3])
-        col5.append(values[4])
-        col6.append(values[5])
-        col7.append(values[6])
-        col8.append(values[7])
-        col9.append(values[8])
-        col10.append(values[9])
-        col11.append(values[10])
-        col12.append(values[11])
-        col13.append(values[12])
-        col14.append(values[13])
+        col1.append(list1[0])
+        col2.append(list1[1])
+        col3.append(list1[2])
+        col4.append(list1[3])
+        col5.append(list1[4])
+        col6.append(list1[5])
+        col7.append(list1[6])
+        col8.append(list1[7])
+        col9.append(list1[8])
+        col10.append(list1[9])
+        col11.append(list1[10])
+        col12.append(list1[11])
+        col13.append(list1[12])
+        col14.append(list1[13])
 
     # print newly formed lists
     print(col1)
